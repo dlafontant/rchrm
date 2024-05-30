@@ -2,7 +2,9 @@ Package: rchrm
 Title: performs recursive clustering at each visit
 Version: 0.0.0.9000
 Authors@R: 
-    person("David-Erick", "Lafontant", "david-erick-lafontant@uiowa.edu", "github.com/dlafontant/R-CHRM", "Ryan", "Cho", "hyunkeun-cho@uiowa.edu" , role = c("aut", "cre"),
+    person("David-Erick", "Lafontant", ,"david-erick-lafontant@uiowa.edu", role = c("aut"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+    person("Hyunkeun", "Cho", ,"hyunkeun-cho@uiowa.edu", role = c("aut", "cre"),
            comment = c(ORCID = "YOUR-ORCID-ID"))
 Description: rchrm takes in a list of matrices, an ID vector, a vector of time associated with each column in these matrices, performs R-CHRM and returns a list of data frames containing ID, repeated variable 1, cluster partitions at each time point.
 License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
