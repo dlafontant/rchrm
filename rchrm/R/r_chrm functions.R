@@ -695,7 +695,7 @@ impute_column_by_group3d <- function(mat, id, group, column, nlimit, imp="copyMe
 # The following function finds the optimal number of clusters for a single array of variables of the same dimensions
 #It takes in as parameters:
 
-#' Title Clustering by Spectral decomposition
+#' Clustering by Spectral decomposition
 #'
 #' @param arr An array with the continuous variables of interest
 #' @param id A vector of IDs associated with each individual in the order of the matrix
@@ -918,11 +918,12 @@ find_optimal_clusters_single3d <- function(arr, id, timevector, B, cor1, var_a =
 
 
 #The following function takes in an list of matrices, an ID vector, the associated time vector, performs R-CHRM and returns a list of data frames
-# containing ID, repeated variable 1, cluster partitions at each time point.
+# containing ID, repeated outcome, cluster partitions at each time point.
 # It takes in as parameters:
 
-#' Title Recursive Clustering by Heterogeneity of repeated Measures R-CHRM
+#' Recursive Clustering by Heterogeneity of repeated Measures R-CHRM
 #'
+#' Performs clustering at each visit using the R-CHRM approach
 #' @param arr a list of matrices of the same dimensions. Longitudinal variable in a wide format.
 #' @param id a vector of IDs associated with each individual in the order of the matrix. 'id' and matrices should be sorted according to 'id'.
 #' @param timevector The visits or time points associated with each column for each variable. Example: timevector = C(0,1,2,3)
@@ -943,7 +944,7 @@ find_optimal_clusters_single3d <- function(arr, id, timevector, B, cor1, var_a =
 #' @param standard Should each variable be globally standardized recursively before running algorithm at each iteration
 #' @param fixmat a matrix specifying where clusters deviate. Works only when the "fixed" option is specified in the gapmethod parameter.
 #'
-#' @return returns a list of data frames containing ID, repeated variable 1, cluster partitions at each time point.
+#' @return Returns a nested list with data frames containing ID, repeated outcome in wide format, cluster partitions at each visit.
 #' @export
 #'
 #' @examples rchrmclus(arr=myarray, id=idvector, timevector=0:3, init_cols=1, B=500, method="scaledPCA", nlimit=20, imp="copyMean.locf", algo="kmeans", dis="Cholesky", gapdis="euclidean", gapmethod="globalSEmax", covmethod="pearson", var_a = TRUE, cor_o=TRUE, cor_t=TRUE, novarcor=FALSE,standard=FALSE, fixmat=FALSE)

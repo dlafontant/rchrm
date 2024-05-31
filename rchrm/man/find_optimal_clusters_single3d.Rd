@@ -2,7 +2,7 @@
 % Please edit documentation in R/r_chrm functions.R
 \name{find_optimal_clusters_single3d}
 \alias{find_optimal_clusters_single3d}
-\title{Title Clustering by Spectral decomposition}
+\title{Clustering by Spectral decomposition}
 \usage{
 find_optimal_clusters_single3d(
   arr,
@@ -61,7 +61,7 @@ find_optimal_clusters_single3d(
 returns a list of data frames containing ID, repeated variable 1, cluster partitions at each time point.
 }
 \description{
-Title Clustering by Spectral decomposition
+Clustering by Spectral decomposition
 }
 \examples{
 find_optimal_clusters_single3d(arr=myarray, id=idvector, B=500, cor1=cor(myarray[[1]][,1],myarray[[2]][,1]) method="scaledPCA", algo="kmeans", dis="Cholesky", gapdis="euclidean", gapmethod="Tibs2001SEmax", covmethod="pearson", var_a = TRUE, cor_o=TRUE, cor_t=TRUE, novarcor=FALSE,standard=FALSE, fixmat=FALSE)

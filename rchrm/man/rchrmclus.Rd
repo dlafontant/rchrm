@@ -2,7 +2,7 @@
 % Please edit documentation in R/r_chrm functions.R
 \name{rchrmclus}
 \alias{rchrmclus}
-\title{Title Recursive Clustering by Heterogeneity of repeated Measures R-CHRM}
+\title{Recursive Clustering by Heterogeneity of repeated Measures R-CHRM}
 \usage{
 rchrmclus(
   arr,
@@ -66,10 +66,10 @@ rchrmclus(
 \item{fixmat}{a matrix specifying where clusters deviate. Works only when the "fixed" option is specified in the gapmethod parameter.}
 }
 \value{
-returns a list of data frames containing ID, repeated variable 1, cluster partitions at each time point.
+Returns a nested list with data frames containing ID, repeated outcome in wide format, cluster partitions at each visit.
 }
 \description{
-Title Recursive Clustering by Heterogeneity of repeated Measures R-CHRM
+Performs clustering at each visit using the R-CHRM approach
 }
 \examples{
 rchrmclus(arr=myarray, id=idvector, timevector=0:3, init_cols=1, B=500, method="scaledPCA", nlimit=20, imp="copyMean.locf", algo="kmeans", dis="Cholesky", gapdis="euclidean", gapmethod="globalSEmax", covmethod="pearson", var_a = TRUE, cor_o=TRUE, cor_t=TRUE, novarcor=FALSE,standard=FALSE, fixmat=FALSE)
