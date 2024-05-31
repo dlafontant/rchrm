@@ -697,6 +697,7 @@ impute_column_by_group3d <- function(mat, id, group, column, nlimit, imp="copyMe
 
 #' Clustering by Spectral decomposition
 #'
+#' Performs clustering using spectral decomposition for complete data
 #' @param arr An array with the continuous variables of interest
 #' @param id A vector of IDs associated with each individual in the order of the matrix
 #' @param timevector The visits or time points associated with each column for each variable. Example: timevector = C(0,1,2,3)
@@ -1206,13 +1207,14 @@ rchrmclus <- function(arr, id, timevector, init_cols=1, B=100, method="original"
 
 
 
-#' Cluster multinomial data
+#' Create multivariate normal data jointly using spectral decomposition.
 #'
+#' Data are generated using AR(1) correlations structure.
 #' @param p1_a the between outcome correlation value
 #' @param E_a the within outcome correlation value
 #' @param s2_a a vector of variances for each visit for both outcome combined.
 #' @param meanvalues Matrix containing the means for each visit cols for each cluster rows. this should have the same number of cols as the length of s2_a
-#' @param sizes avector with the sizes for each cluster. This should have the same number of rows as the matrix meanvalues
+#' @param sizes a vector with the sizes for each cluster. This should have the same number of rows as the matrix meanvalues
 #'
 #' @return a matrix with data geneterated using
 #' @export

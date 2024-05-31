@@ -2,7 +2,7 @@
 % Please edit documentation in R/r_chrm functions.R
 \name{createdata}
 \alias{createdata}
-\title{Cluster multinomial data}
+\title{Create multivariate normal data jointly using spectral decomposition.}
 \usage{
 createdata(p1_a, E_a, s2_a, meanvalues, sizes)
 }
@@ -15,13 +15,13 @@ createdata(p1_a, E_a, s2_a, meanvalues, sizes)
 
 \item{meanvalues}{Matrix containing the means for each visit cols for each cluster rows. this should have the same number of cols as the length of s2_a}
 
-\item{sizes}{avector with the sizes for each cluster. This should have the same number of rows as the matrix meanvalues}
+\item{sizes}{a vector with the sizes for each cluster. This should have the same number of rows as the matrix meanvalues}
 }
 \value{
 a matrix with data geneterated using
 }
 \description{
-Cluster multinomial data
+Data are generated using AR(1) correlations structure.
 }
 \examples{
 createdata(p1_a=.5, E_a=c(.3,.4,.6,.4) ,s2_a=c(1,2,2,1,1,1,2,2), meanvalues=matrix(c(3,3,3,6,2,2,6,2,2,6,5,2,3,3,3,7,5,5,8,4,4,9,7,2), ncol=8), sizes=c(100,100,100))

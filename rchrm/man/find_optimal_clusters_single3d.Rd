@@ -61,7 +61,7 @@ find_optimal_clusters_single3d(
 returns a list of data frames containing ID, repeated variable 1, cluster partitions at each time point.
 }
 \description{
-Clustering by Spectral decomposition
+Performs clustering using spectral decomposition for complete data
 }
 \examples{
 find_optimal_clusters_single3d(arr=myarray, id=idvector, B=500, cor1=cor(myarray[[1]][,1],myarray[[2]][,1]) method="scaledPCA", algo="kmeans", dis="Cholesky", gapdis="euclidean", gapmethod="Tibs2001SEmax", covmethod="pearson", var_a = TRUE, cor_o=TRUE, cor_t=TRUE, novarcor=FALSE,standard=FALSE, fixmat=FALSE)
